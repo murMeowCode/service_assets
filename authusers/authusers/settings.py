@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
     'rest_framework',
     'rest_framework_simplejwt',
     'djoser',
@@ -72,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'authusers.wsgi.application'
 
-#AUTH_USER_MODEL = "my_finance.User"
+AUTH_USER_MODEL = "users.User"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -173,6 +174,9 @@ SIMPLE_JWT = {
 
 DJOSER = {
     "PASSWORD_RESET_CONFIRM_URL": "#/{uid}/{token}",
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.CustomUserCreateSerializer',
+    },
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
