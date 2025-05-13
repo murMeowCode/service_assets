@@ -1,5 +1,6 @@
 from djoser.serializers import UserCreateSerializer
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password
 from .models import User 
 
 
@@ -20,15 +21,13 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         fields = UserCreateSerializer.Meta.fields + ('role','first_name','last_name','father_name','birthday')
 
     def create(self, validated_data):
-        if validated_data['role'] == 1:
-            user = User.objects.create(
-                **validated_data,
-                is_active=False
-            )
-        else:
-            user = User.objects.create(
-                **validated_data,
-                is_active=True
-            )
+        validated_data['password'] = make_password(validated_data['password'])
+
+        is_active = (validated_data['role'] != 0)  # Админ активен не сразу
+        
+        user = User.objects.create(
+            **validated_data,
+            is_active=is_active
+        )
 
         return user
