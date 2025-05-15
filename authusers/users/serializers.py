@@ -40,18 +40,17 @@ class UserConfirmSerializer(serializers.ModelSerializer):
         read_only_fields = ('id', 'username', 'first_name', 'last_name', 'father_name')
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
-    def validate(self, attrs):
-        data = super().validate(attrs)
-        refresh = self.get_token(self.user)
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)  # Получаем стандартный токен
         
-        # Добавляем дополнительные поля
-        data['user'] = {
-            'id': self.user.id,
-            'username': self.user.username,
-            'email': self.user.email,
-            'first_name': self.user.first_name,
-            'last_name': self.user.last_name,
-            'father_name': self.user.father_name,
-            'role': self.user.id
-        }
-        return data
+        # Добавляем кастомные поля в payload токена
+        token['user_id'] = user.id
+        token['username'] = user.username
+        token['email'] = user.email
+        token['first_name'] = user.first_name
+        token['last_name'] = user.last_name
+        token['father_name'] = user.father_name
+        token['role'] = user.role
+        
+        return token
