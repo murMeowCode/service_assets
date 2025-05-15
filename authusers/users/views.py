@@ -3,6 +3,7 @@ from rest_framework import viewsets, mixins
 from rest_framework.response import Response
 from .models import User
 from .serializers import UserConfirmSerializer
+from .permissions import IsAdministrator
 from authusers.settings import EMAIL_HOST_USER
 
 class PendingUsersViewSet(viewsets.GenericViewSet,
@@ -10,6 +11,7 @@ class PendingUsersViewSet(viewsets.GenericViewSet,
                           mixins.UpdateModelMixin):
     queryset = User.objects.filter(is_active = False)
     serializer_class = UserConfirmSerializer
+    permission_classes = [IsAdministrator]
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
