@@ -1,8 +1,9 @@
 from django.core.mail import send_mail
 from rest_framework import viewsets, mixins
 from rest_framework.response import Response
+from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import User
-from .serializers import UserConfirmSerializer
+from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer
 from .permissions import IsAdministrator
 from authusers.settings import EMAIL_HOST_USER
 
@@ -44,3 +45,6 @@ class PendingUsersViewSet(viewsets.GenericViewSet,
         )
 
         return Response(serializer.data)
+    
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer

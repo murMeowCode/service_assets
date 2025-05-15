@@ -1,4 +1,5 @@
 from djoser.serializers import UserCreateSerializer
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from django.contrib.auth.hashers import make_password
 from .models import User 
@@ -37,3 +38,20 @@ class UserConfirmSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id','username','first_name','last_name','father_name','is_active')
         read_only_fields = ('id', 'username', 'first_name', 'last_name', 'father_name')
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        refresh = self.get_token(self.user)
+        
+        # Добавляем дополнительные поля
+        data['user'] = {
+            'id': self.user.id,
+            'username': self.user.username,
+            'email': self.user.email,
+            'first_name': self.user.first_name,
+            'last_name': self.user.last_name,
+            'father_name': self.user.father_name,
+            'role': self.user.id
+        }
+        return data

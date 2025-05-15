@@ -176,6 +176,7 @@ DJOSER = {
     "PASSWORD_RESET_CONFIRM_URL": "#/{uid}/{token}",
     'SERIALIZERS': {
         'user_create': 'users.serializers.CustomUserCreateSerializer',
+        'token_create': 'users.serializers.CustomTokenObtainPairSerializer',
     },
 }
 
