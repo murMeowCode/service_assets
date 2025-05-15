@@ -31,3 +31,9 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         )
 
         return user
+    
+class UserConfirmSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id','username','first_name','last_name','father_name','is_active')
+        read_only_fields = ('id', 'username', 'first_name', 'last_name', 'father_name')
