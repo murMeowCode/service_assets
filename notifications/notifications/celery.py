@@ -13,9 +13,16 @@ app.autodiscover_tasks(['notify'])
 def consume_notifications():
     connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
     channel = connection.channel()
+    channel.queue_declare(queue='notifications', durable=True) 
     
     def callback(ch, method, properties, body):
-        process_notification.delay(body)
+        # Измените вызов задачи
+        message = body.decode('utf-8')
+        app.send_task(
+            'notify.tasks.process_notification',
+            args=[message],
+            queue='notifications'
+        )
     
     channel.basic_consume(
         queue='notifications',

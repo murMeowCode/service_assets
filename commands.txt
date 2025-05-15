@@ -1,0 +1,2 @@
+celery -A notifications worker --loglevel=info -Q notifications
+а так же запуск rabbit-mq
