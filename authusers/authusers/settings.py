@@ -187,3 +187,26 @@ EMAIL_PORT = 587  # или 465 для SSL
 EMAIL_USE_TLS = True  # или EMAIL_USE_SSL = True, в зависимости от порта
 EMAIL_HOST_USER = "mannanovr70@gmail.com"
 EMAIL_HOST_PASSWORD = "oafd mldn jpqj lgxk"
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'rpc_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'rpc_server.log',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'rpc_server': {
+            'handlers': ['rpc_file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
