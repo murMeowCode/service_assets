@@ -127,7 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'notifications.authentication.RabbitMQJWTAuthentication',
     ]
 }
 
@@ -178,9 +178,18 @@ EMAIL_USE_TLS = True  # или EMAIL_USE_SSL = True, в зависимости �
 EMAIL_HOST_USER = "mannanovr70@gmail.com"
 EMAIL_HOST_PASSWORD = "oafd mldn jpqj lgxk"
 
-CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 CELERY_RESULT_BACKEND = 'rpc://'
 CELERY_ACCEPT_CONTENT = ['json'] 
 CELERY_TASK_SERIALIZER = 'json'  
 CELERY_RESULT_SERIALIZER = 'json'
 RABBITMQ_HOST = 'localhost'
+
+CELERY_TASK_DEFAULT_QUEUE = 'notifications'
+CELERY_TASK_CREATE_MISSING_QUEUES = True
+CELERY_TASK_QUEUES = {
+    'notifications': {
+        'exchange': 'notifications',
+        'routing_key': 'notifications',
+    },
+}
