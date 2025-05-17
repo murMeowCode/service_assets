@@ -23,7 +23,7 @@ MEDIA_URL = '/media/'  # URL для доступа к медиафайлам
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jtzh#%i95kz+qhk3)2(-tp9zx2(6*htl)jckh3ooji%u_tyd%d'
+SECRET_KEY = 'django-insecure-hr453lmoiosd6l_lekueo=4rw+gl#3t=c(6mu6!y&in^9u&&tn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,3 +128,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'info.authentication.RabbitMQJWTAuthentication',
+    ]
+}
