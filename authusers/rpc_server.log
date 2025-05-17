@@ -1,0 +1,14 @@
+ [x] RPC Server started. Awaiting requests...
+2025-05-17 08:34:20,850 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+Received request for user_id: 9
+User found: {'exists': True, 'is_active': True, 'username': 'test1', 'email': 'postgres@mail.ru', 'role': 0, 'first_name': 'asd', 'last_name': 'asd', 'father_name': 'asd', 'id': 9}
+Response sent for user_id: 9
+Received request for user_id: 9
+User found: {'exists': True, 'is_active': True, 'username': 'test1', 'email': 'postgres@mail.ru', 'role': 0, 'first_name': 'asd', 'last_name': 'asd', 'father_name': 'asd', 'id': 9}
+Response sent for user_id: 9
+Received request for user_id: 9
+User found: {'exists': True, 'is_active': True, 'username': 'test1', 'email': 'postgres@mail.ru', 'role': 0, 'first_name': 'asd', 'last_name': 'asd', 'father_name': 'asd', 'id': 9}
+Response sent for user_id: 9
+Received request for user_id: 9
+User found: {'exists': True, 'is_active': True, 'username': 'test1', 'email': 'postgres@mail.ru', 'role': 0, 'first_name': 'asd', 'last_name': 'asd', 'father_name': 'asd', 'id': 9}
+Response sent for user_id: 9
