@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from faq.views import FAQAPIView
+from news.views import NewsItemListCreateView, CommentListCreateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('faq/',FAQAPIView.as_view(),name='faq-list-create')
-]
+    path('faq/',FAQAPIView.as_view(),name='faq-list-create'),
+    path('news/', NewsItemListCreateView.as_view(), name='news-list-create'),
+    path('news/<int:news_id>/comments/', CommentListCreateView.as_view(), name='comment-list-create'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
