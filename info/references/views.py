@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from .serializers import RoleSerializer
+from .models import Role
 
-# Create your views here.
+class RoleListAPIView(ListAPIView):
+    queryset = Role.objects.all()
+    serializer_class = RoleSerializer
