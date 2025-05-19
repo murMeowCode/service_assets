@@ -54,3 +54,9 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['role'] = user.role
         
         return token
+    
+class BalanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id','username','balance','balance_virtual')
+        read_only_fields = ('id','username')
