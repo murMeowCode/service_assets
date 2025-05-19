@@ -34,10 +34,13 @@ class RabbitMQJWTAuthentication(JWTAuthentication):
                     self.email = kwargs.get('email')
                     self.is_authenticated = True
                     self.is_active = kwargs.get('is_active', True)
-                    self.role = kwargs.get('role')
+                    self.is_root = kwargs.get('is_root')
                     self.first_name = kwargs.get('first_name')
                     self.last_name = kwargs.get('last_name')
                     self.father_name = kwargs.get('father_name')
+                    self.balance = kwargs.get('balance')
+                    self.balance_virtual = kwargs.get('balance_virtual')
+                    self.vip_level = kwargs.get('vip_level')
             
             return SimpleUser(**response)
             
