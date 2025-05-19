@@ -1,5 +1,5 @@
 from lot.models import Lottery, Participant
-from rabbitmq_service import RabbitMQService
+from .rabbitmq_service import RabbitMQService
 
 class LotteryService:
     @staticmethod
@@ -26,7 +26,6 @@ class LotteryService:
                 RabbitMQService.send_balance_update(
                     participant.user_id,
                     participant.prize_amount,
-                    participant.prize_amount * 0.01
                 )
             
             RabbitMQService.send_notification(participant)

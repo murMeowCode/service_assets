@@ -40,7 +40,9 @@ class RabbitMQService:
             routing_key='user_balance_updates',
             body=json.dumps(message),
             properties=pika.BasicProperties(
-                delivery_mode=2,
+                delivery_mode=2,  # make message persistent
+                content_type='application/json',
+                content_encoding='utf-8'
             )
         )
         connection.close()
