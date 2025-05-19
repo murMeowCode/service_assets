@@ -53,7 +53,7 @@ class LotteryService:
         lottery.save()
 
     @staticmethod
-    def _select_winners(participants, lottery):
+    def _select_winners(participants):
         
         win = list()
         for _ in range(4):
