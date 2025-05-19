@@ -20,12 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from faq.views import FAQAPIView
 from news.views import NewsItemListCreateView, CommentListCreateView
+from achivments.views import AchivmentsListView, UserAchivmentsListView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('achivments/', AchivmentsListView.as_view(), name='achivments-list'),
     path('faq/',FAQAPIView.as_view(),name='faq-list-create'),
     path('news/', NewsItemListCreateView.as_view(), name='news-list-create'),
+    path('user-achivments/', UserAchivmentsListView.as_view(), name='user-achivments-list'),
     path('news/<int:news_id>/comments/', CommentListCreateView.as_view(), name='comment-list-create'),
     path('',include('references.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

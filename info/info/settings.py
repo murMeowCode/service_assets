@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'faq',
     'news',
-    'references'
+    'references',
+    'achivments'
 ]
 
 MIDDLEWARE = [
@@ -82,8 +83,12 @@ WSGI_APPLICATION = 'info.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'info',
+        'USER': 'postgres',
+        'PASSWORD': '2418908595',
+        'HOST': '0.0.0.0',
+        'PORT': '54320',
     }
 }
 
