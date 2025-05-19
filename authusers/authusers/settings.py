@@ -214,3 +214,9 @@ LOGGING = {
         },
     },
 }
+
+
+RABBITMQ_HOST = 'localhost'
+RABBITMQ_PORT = 5672
+RABBITMQ_USER = 'guest'
+RABBITMQ_PASSWORD = 'guest'
