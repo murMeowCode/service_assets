@@ -30,13 +30,18 @@ def start_balance_updater_consumer():
         try:
             data = json.loads(body)
             user_id = data['user_id']
-            amount = data['amount']
-            
-            user = User.objects.get(id=user_id)
-            user.balance += amount
-            user.balance_virtual += amount*0.01
-            user.save()
-            
+            amount = data['amount'],
+            operation_type = data['type']
+            if operation_type == 'income':
+                user = User.objects.get(id=user_id)
+                user.balance += amount
+                user.balance_virtual += amount*0.01
+                user.save()
+            else:
+                user = User.objects.get(id=user_id)
+                user.balance -= amount
+                user.balance_virtual += amount*0.1
+                user.save()
             ch.basic_ack(delivery_tag=method.delivery_tag)
             logger.info(f"Updated balance for user_id={user_id}: +{amount} (real)")
         except Exception as e:
