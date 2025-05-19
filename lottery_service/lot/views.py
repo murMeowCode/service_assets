@@ -3,6 +3,7 @@ from .models import Lottery, Participant
 from .serializers import LotterySerializer, ParticipantSerializer
 from rest_framework.response import Response
 from django.utils import timezone
+from .services.rabbitmq_service import RabbitMQService
 
 class LotteryListAPIView(generics.ListAPIView):
     queryset = Lottery.objects.all()
@@ -18,7 +19,7 @@ class ParticipantListCreateAPIView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         lottery_id = self.request.data.get('lottery_id')
         lottery = Lottery.objects.get(id=lottery_id)
-        
+        RabbitMQService.send_balance_update(self.request.user.id,lottery.ticket_price,"outcome")
         # Generate ticket number (you might want to implement a better logic)
         ticket_number = self.request.data.get('ticket')
         

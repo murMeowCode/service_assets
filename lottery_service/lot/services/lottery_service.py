@@ -1,3 +1,5 @@
+from pygost import gost28147
+import secrets
 from lot.models import Lottery, Participant
 from .rabbitmq_service import RabbitMQService
 
@@ -14,18 +16,35 @@ class LotteryService:
             LotteryService._process_lottery(lottery)
 
     @staticmethod
+    def _generate(number):
+        '''
+        Функция генерации случайного числа из числа сочетаний
+        number: количество сочетаний
+        '''
+        key = secrets.token_bytes(32)
+        sbox = "id-Gost28147-89-CryptoPro-A-ParamSet"
+        random_bytes = gost28147.encrypt(key=key,ns= (1,1), sbox = sbox)
+        PSP = random_bytes[1]
+        result = (PSP % number) + 1
+        
+        return result
+
+    
+    @staticmethod
     def _process_lottery(lottery):
         participants = Participant.objects.filter(lottery_id=lottery.id)
-        winners = LotteryService._select_winners(participants, lottery)
+        winners = LotteryService._select_winners(participants)
         
         for participant in participants:
-            participant.status, participant.prize_amount = LotteryService._determine_prize(participant, winners)
+            participant.status, participant.prize_amount = LotteryService._determine_prize(participant, winners,lottery)
             participant.save()
             
             if participant.prize_amount > 0:
                 RabbitMQService.send_balance_update(
                     participant.user_id,
                     participant.prize_amount,
+                    "income",
+                    "real"
                 )
             
             RabbitMQService.send_notification(participant)
@@ -35,17 +54,29 @@ class LotteryService:
 
     @staticmethod
     def _select_winners(participants, lottery):
-        # Здесь должна быть ваша реальная логика выбора победителей
-        # Это примерная реализация
-        full_winners = {}
-        partial_winners = {}
         
-        if participants:
-            full_winners[participants[0]] = lottery.prize_fund * 0.7
-        if len(participants) > 1:
-            partial_winners[participants[1]] = lottery.prize_fund * 0.2
-        if len(participants) > 2:
-            partial_winners[participants[2]] = lottery.prize_fund * 0.1
+        win = list()
+        for _ in range(4):
+            win.append(LotteryService._generate(3))
+        
+        full_winners = []
+        partial_winners = []
+
+        for participant in participants:
+            # Преобразуем строку '1234' в [1, 2, 3, 4]
+            ticket_numbers = [int(digit) for digit in participant.ticket]
+            
+            match_count = 0
+            for i in range(4):
+                if ticket_numbers[i] == win[i]:
+                    match_count += 1
+                else:
+                    break  # Прерываем, если не совпадает очередное число
+            
+            if match_count == 4:
+                full_winners.append(participant)
+            elif match_count == 3:
+                partial_winners.append(participant)
             
         return {
             'full_winners': full_winners,
@@ -53,9 +84,9 @@ class LotteryService:
         }
 
     @staticmethod
-    def _determine_prize(participant, winners):
+    def _determine_prize(participant, winners, lottery):
         if participant in winners['full_winners']:
-            return 'winner', winners['full_winners'][participant]
+            return 'winner', (lottery.prize_fund - len(winners['partial_winners']) * lottery.ticket_price * 2)/len(winners['full_winners'])
         elif participant in winners['partial_winners']:
-            return 'partial_winner', winners['partial_winners'][participant]
+            return 'partial_winner', lottery.ticket_price * 2
         return 'loser', 0
