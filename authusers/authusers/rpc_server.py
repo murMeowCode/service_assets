@@ -36,11 +36,14 @@ def on_request(ch, method, props, body):
             'is_active': user.is_active,
             'username': user.username,
             'email': user.email,
-            'role': user.role,
+            'is_root': user.is_root,
             'first_name': user.first_name,
             'last_name': user.last_name,
             'father_name': user.father_name,
-            'id': user.id
+            'id': user.id,
+            'vip_level': user.vip_level,
+            'balance': user.balance,
+            'balance_virtual': user.balance_virtual
         }
         
         logger.debug(f"User found: {response}")
