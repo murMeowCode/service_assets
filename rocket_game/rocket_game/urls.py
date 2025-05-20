@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from rocket.views import AccountViewSet
+from rocket.views import AccountViewSet, CompareNumbersAPI
 
 router = DefaultRouter()
 router.register(r'game_accounts',AccountViewSet,basename='game_accounts')
@@ -25,4 +25,5 @@ router.register(r'game_accounts',AccountViewSet,basename='game_accounts')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)), 
+    path('compare/', CompareNumbersAPI.as_view(), name='compare-numbers'),
 ]
