@@ -771,3 +771,390 @@ Response sent for user_id: 4
 Received request for user_id: 4
 User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': -5020.0, 'balance_virtual': -1001.9999999999998}
 Response sent for user_id: 4
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 14:39:09,530 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 14:39:48,147 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 1, 'balance': 5756.0, 'balance_virtual': -844.4999999999998}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -744.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1746.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4654.0, 'balance_virtual': -1736.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4654.0, 'balance_virtual': -1736.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4654.0, 'balance_virtual': -1736.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4554.0, 'balance_virtual': -1726.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4554.0, 'balance_virtual': -1726.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4554.0, 'balance_virtual': -1726.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1726.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4754.0, 'balance_virtual': -1726.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4654.0, 'balance_virtual': -1716.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4554.0, 'balance_virtual': -1706.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4454.0, 'balance_virtual': -1696.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4354.0, 'balance_virtual': -1686.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4254.0, 'balance_virtual': -1676.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4154.0, 'balance_virtual': -1666.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 4054.0, 'balance_virtual': -1656.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 17:23:26,282 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 17:23:32,812 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+Received request for user_id: 4
+User found: {'exists': True, 'is_active': True, 'username': 'ramzess', 'email': 'grisha23.01.2004@gmail.com', 'is_root': True, 'first_name': 'Григорийкаук', 'last_name': 'Алекян', 'father_name': 'Валерьевич', 'id': 4, 'vip_level': 0, 'balance': 3954.0, 'balance_virtual': -1646.2999999999997}
+Response sent for user_id: 4
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 18:46:40,873 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...
+ [x] RPC Server started. Awaiting requests...
+2025-05-20 18:52:06,175 - rpc_server - INFO -  [x] RPC Server started. Awaiting requests...

@@ -20,10 +20,11 @@ class CustomUserUpdateSerializer(serializers.ModelSerializer):
     firstname = serializers.CharField(source='last_name', required=False)
     patronymic = serializers.CharField(source='father_name', required=False)
     birthdate = serializers.CharField(required=False)  # Принимаем любую строку
+    vip_level = serializers.IntegerField(required=False)
     
     class Meta:
         model = User
-        fields = ['name', 'firstname', 'patronymic', 'birthdate']
+        fields = ['name', 'firstname', 'patronymic', 'birthdate','vip_level']
     
     def validate_birthdate(self, value):
         """Парсим дату в разных форматах"""
@@ -44,16 +45,17 @@ class CustomUserUpdateSerializer(serializers.ModelSerializer):
     
     def update(self, instance, validated_data):
         # Обновляем стандартные поля
-        if 'first_name' in validated_data:
-            instance.first_name = validated_data['first_name']
-        if 'last_name' in validated_data:
-            instance.last_name = validated_data['last_name']
-        if 'father_name' in validated_data:
-            instance.father_name = validated_data['father_name']
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
+        instance.father_name = validated_data.get('father_name', instance.father_name)
         
-        # Особый случай для даты рождения
+        # Обрабатываем специальные поля
         if 'birthdate' in validated_data:
             instance.birthday = validated_data['birthdate']
+        
+        # Добавляем обработку vip_level
+        if 'vip_level' in validated_data:
+            instance.vip_level = validated_data['vip_level']
         
         instance.save()
         return instance
@@ -66,10 +68,11 @@ class CustomUserCreateSerializer(UserCreateSerializer):
     is_root = serializers.BooleanField(required=False)
     balance = serializers.FloatField(required=False)
     balance_virtual = serializers.FloatField(required=False)
+    vip_level = serializers.IntegerField(required=False)
 
     class Meta(UserCreateSerializer.Meta):
         model = User
-        fields = UserCreateSerializer.Meta.fields + ('first_name','last_name','father_name','birthday','is_root', "balance", 'balance_virtual')
+        fields = UserCreateSerializer.Meta.fields + ('first_name','last_name','father_name','birthday','is_root', "balance", 'balance_virtual', 'vip_level')
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
