@@ -28,13 +28,7 @@ class CustomUserViewSet(UserViewSet):
             
             serializer.is_valid(raise_exception=True)
             
-            # Логируем данные перед сохранением
-            logger.info(f"Updating user data: {serializer.validated_data}")
-            
             user = serializer.save()
-            
-            # Логируем результат
-            logger.info(f"User updated successfully. New data: {user.__dict__}")
             
             return Response(serializer.data)
             
