@@ -3,13 +3,14 @@ from .services.lottery_service import LotteryService
 from .models import Lottery
 from django.utils import timezone
 from datetime import timedelta
+from django.conf import settings
 
 @shared_task(name="check_and_process_finished_lotteries")
 def check_and_process_finished_lotteries():
     LotteryService.process_finished_lotteries()
     
 @shared_task(name="create-new-lottery")
-def create_new_lottery(time_lag):
+def create_new_lottery():
     # Получаем все незавершенные лотереи
     active_lotteries = Lottery.objects.filter(is_finished=False).order_by('-end_date')
     
@@ -19,7 +20,7 @@ def create_new_lottery(time_lag):
         latest_end_date = active_lotteries.first().end_date if active_lotteries.exists() else timezone.now()
         
         # Создаем новую лотерею с end_date +15 минут от самой поздней
-        new_end_date = latest_end_date + timedelta(minutes=time_lag)
+        new_end_date = latest_end_date + timedelta(minutes=settings.TIME_LAG)
         
         Lottery.objects.create(
             end_date=new_end_date,
