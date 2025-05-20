@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from users.views import PendingUsersViewSet,CustomTokenObtainPairView,CustomUserViewSet
+from users.views import PendingUsersViewSet,CustomTokenObtainPairView,CustomUserViewSet, BalanceAPIView
 
 router = DefaultRouter()
 router.register(r'confirm-users', PendingUsersViewSet, basename='confirm-users')
@@ -28,6 +28,7 @@ urlpatterns = [
     path('auth/',include('djoser.urls')),
     path('auth/jwt/create/', CustomTokenObtainPairView.as_view(), name='jwt-create'),
     path('auth/',include('djoser.urls.jwt')),
+    path('balance/', BalanceAPIView.as_view())
 ]
 urlpatterns+=router.urls
 

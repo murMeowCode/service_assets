@@ -31,6 +31,7 @@ def start_balance_updater_consumer():
             data = json.loads(body)
             user_id = data['user_id']
             amount = data['amount'],
+            amount = amount[0]
             operation_type = data['type']
             value_type = data['value_type']
             if value_type == 'real':

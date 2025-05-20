@@ -9,6 +9,12 @@ from datetime import datetime
 
 User = get_user_model()
 
+class BalanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id','username','balance','balance_virtual')
+        read_only_fields = ('id','username')
+
 class CustomUserUpdateSerializer(serializers.ModelSerializer):
     name = serializers.CharField(source='first_name', required=False)
     firstname = serializers.CharField(source='last_name', required=False)
@@ -58,10 +64,12 @@ class CustomUserCreateSerializer(UserCreateSerializer):
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
     is_root = serializers.BooleanField(required=False)
+    balance = serializers.FloatField(required=False)
+    balance_virtual = serializers.FloatField(required=False)
 
     class Meta(UserCreateSerializer.Meta):
         model = User
-        fields = UserCreateSerializer.Meta.fields + ('first_name','last_name','father_name','birthday','is_root')
+        fields = UserCreateSerializer.Meta.fields + ('first_name','last_name','father_name','birthday','is_root', "balance", 'balance_virtual')
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])

@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.generics import UpdateAPIView
 from .models import User
+from rest_framework.views import APIView
 from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer,BalanceSerializer, CustomUserCreateSerializer, CustomUserUpdateSerializer
 from .permissions import IsAdministrator
 from authusers.settings import EMAIL_HOST_USER
@@ -164,3 +165,97 @@ class BalanceAPIView(UpdateAPIView):
                 {"error": "Invalid action. Allowed: 'in', 'out', 'convert'"},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+class BalanceAPIView(APIView):  # Изменено с UpdateAPIView на APIView
+    serializer_class = BalanceSerializer
+
+    def patch(self, request, *args, **kwargs):
+        user = request.user
+        action = request.data.get('action')
+        value_type = request.data.get('value_type')
+        value = request.data.get('value', 0)
+        
+        try:
+            value = float(value)
+            if value <= 0:
+                raise ValueError("Value must be positive")
+        except (TypeError, ValueError):
+            return Response(
+                {"error": "Invalid value. Must be a positive number."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if action == 'in':
+            if value_type == 'real':
+                user.balance += value
+            elif value_type == 'virtual':
+                user.balance_virtual += value
+            else:
+                return Response(
+                    {"error": "Invalid value_type for 'in' action"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            user.save()
+            return Response({
+                "status": "success",
+                "new_balance": user.balance,
+                "new_virtual_balance": user.balance_virtual
+            })
+
+        elif action == 'out':
+            if value_type == 'real':
+                if user.balance < value:
+                    return Response(
+                        {"error": "Insufficient real balance"},
+                        status=status.HTTP_400_BAD_REQUEST
+                    )
+                user.balance -= value
+            elif value_type == 'virtual':
+                if user.balance_virtual < value:
+                    return Response(
+                        {"error": "Insufficient virtual balance"},
+                        status=status.HTTP_400_BAD_REQUEST
+                    )
+                user.balance_virtual -= value
+            else:
+                return Response(
+                    {"error": "Invalid value_type for 'out' action"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            user.save()
+            return Response({
+                "status": "success",
+                "new_balance": user.balance,
+                "new_virtual_balance": user.balance_virtual
+            })
+
+        elif action == 'convert':
+            if value_type != 'real':
+                return Response(
+                    {"error": "Conversion only allowed from real to virtual"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            if user.balance < value:
+                return Response(
+                    {"error": "Insufficient real balance for conversion"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            user.balance -= value
+            bonus = value * 0.05
+            user.balance_virtual += value + bonus
+            user.save()
+            return Response({
+                "status": "success",
+                "converted": value,
+                "bonus": bonus,
+                "new_balance": user.balance,
+                "new_virtual_balance": user.balance_virtual
+            })
+
+        # Добавлено: возврат ошибки, если action не распознан
+        return Response(
+            {"error": "Invalid action. Allowed: 'in', 'out', 'convert'"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
