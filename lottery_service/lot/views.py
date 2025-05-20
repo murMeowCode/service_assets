@@ -19,6 +19,40 @@ class ParticipantListCreateAPIView(generics.ListCreateAPIView):
     def get_queryset(self):
         return Participant.objects.filter(user_id=self.request.user.id)
 
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        
+        # Основные данные
+        serializer = self.get_serializer(queryset, many=True)
+        data = serializer.data
+        
+        # Агрегированные данные
+        aggregates = queryset.aggregate(
+            total_count=Count('id'),
+            total_prize=Sum('prize_amount'),
+            winner_count=Count('id', filter=models.Q(status='winner')),
+            partial_winner_count=Count('id', filter=models.Q(status='partial_winner')))
+        
+        # Статусная статистика
+        status_stats = dict(
+            queryset.values_list('status')
+                  .annotate(count=Count('status')))
+        
+        response_data = {
+            'participants': data,
+            'stats': {
+                'total_count': aggregates['total_count'],
+                'total_prize_amount': aggregates['total_prize'] or 0,
+                'status_counts': {
+                    'winner': aggregates['winner_count'],
+                    'partial_winner': aggregates['partial_winner_count'],
+                },
+                'detailed_status_stats': status_stats,
+            }
+        }
+        
+        return Response(response_data)
+    
     def perform_create(self, serializer):
         lottery_id = self.request.data.get('lottery_id')
         lottery = Lottery.objects.get(id=lottery_id)
