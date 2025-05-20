@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-TIME_LAG = 1
+TIME_LAG = 15
 
 # Application definition
 
