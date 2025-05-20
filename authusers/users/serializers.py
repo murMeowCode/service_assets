@@ -7,31 +7,25 @@ from .models import User
 
 
 class CustomUserCreateSerializer(UserCreateSerializer):
-    ROLE_CHOICES = (
-        (0, 'Администратор'),
-        (1, 'Пользователь')
-    )
-    role = serializers.ChoiceField(choices=ROLE_CHOICES, required=True)
     birthday = serializers.DateField(required=True)
     father_name = serializers.CharField(required=True)
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
+    is_root = serializers.BooleanField(required=False)
 
     class Meta(UserCreateSerializer.Meta):
         model = User
-        fields = UserCreateSerializer.Meta.fields + ('role','first_name','last_name','father_name','birthday')
+        fields = UserCreateSerializer.Meta.fields + ('first_name','last_name','father_name','birthday','is_root')
 
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
 
-        is_active = (validated_data['role'] != 0)  # Админ активен не сразу
-        
         user = User.objects.create(
-            **validated_data,
-            is_active=is_active
+            **validated_data
         )
 
         return user
+
     
 class UserConfirmSerializer(serializers.ModelSerializer):
     class Meta:
@@ -51,7 +45,6 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['first_name'] = user.first_name
         token['last_name'] = user.last_name
         token['father_name'] = user.father_name
-        token['role'] = user.role
         
         return token
     

@@ -1,13 +1,25 @@
 from django.core.mail import send_mail
 from rest_framework import viewsets, mixins, status
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.generics import UpdateAPIView
 from .models import User
-from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer,BalanceSerializer
+from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer,BalanceSerializer, CustomUserCreateSerializer
 from .permissions import IsAdministrator
 from authusers.settings import EMAIL_HOST_USER
+from djoser.views import UserViewSet
+from rest_framework.decorators import action
 
+
+class CustomUserViewSet(UserViewSet):
+    permission_classes = [IsAuthenticated]
+
+    @action(detail=False, methods=['get'], url_path='me')
+    def me(self, request, *args, **kwargs):
+        serializer = CustomUserCreateSerializer(request.user)
+        return Response(serializer.data)
+    
 class PendingUsersViewSet(viewsets.GenericViewSet,
                           mixins.ListModelMixin,
                           mixins.UpdateModelMixin):

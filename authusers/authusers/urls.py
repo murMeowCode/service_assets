@@ -17,15 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from users.views import PendingUsersViewSet,CustomTokenObtainPairView
+from users.views import PendingUsersViewSet,CustomTokenObtainPairView,CustomUserViewSet
 
 router = DefaultRouter()
 router.register(r'confirm-users', PendingUsersViewSet, basename='confirm-users')
-
+custom_user_me = CustomUserViewSet.as_view({'get': 'me'})
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('auth/users/me/', custom_user_me, name='custom-user-me'),
     path('auth/',include('djoser.urls')),
     path('auth/jwt/create/', CustomTokenObtainPairView.as_view(), name='jwt-create'),
     path('auth/',include('djoser.urls.jwt')),
 ]
 urlpatterns+=router.urls
+
+
