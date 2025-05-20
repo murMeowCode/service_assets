@@ -6,6 +6,7 @@ class Role(models.Model):
     
 class VipStatus(models.Model):
     describe = models.CharField(max_length=500)
+    requierments = models.CharField(max_length=500)
     price = models.FloatField()
     
     
