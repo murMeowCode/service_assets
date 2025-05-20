@@ -21,7 +21,7 @@ from users.views import PendingUsersViewSet,CustomTokenObtainPairView,CustomUser
 
 router = DefaultRouter()
 router.register(r'confirm-users', PendingUsersViewSet, basename='confirm-users')
-custom_user_me = CustomUserViewSet.as_view({'get': 'me'})
+custom_user_me = CustomUserViewSet.as_view({'get': 'me', 'patch': 'me'})
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/users/me/', custom_user_me, name='custom-user-me'),

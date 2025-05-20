@@ -5,19 +5,40 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.generics import UpdateAPIView
 from .models import User
-from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer,BalanceSerializer, CustomUserCreateSerializer
+from .serializers import UserConfirmSerializer,CustomTokenObtainPairSerializer,BalanceSerializer, CustomUserCreateSerializer, CustomUserUpdateSerializer
 from .permissions import IsAdministrator
 from authusers.settings import EMAIL_HOST_USER
 from djoser.views import UserViewSet
 from rest_framework.decorators import action
+import logging
 
+logger = logging.getLogger(__name__)  # Создаём логгер для текущего модуля
 
 class CustomUserViewSet(UserViewSet):
     permission_classes = [IsAuthenticated]
-
-    @action(detail=False, methods=['get'], url_path='me')
+        
+    @action(detail=False, methods=['get', 'patch'], url_path='me')
     def me(self, request, *args, **kwargs):
-        serializer = CustomUserCreateSerializer(request.user)
+        if request.method == 'PATCH':
+            serializer = CustomUserUpdateSerializer(
+                request.user,
+                data=request.data,
+                partial=True
+            )
+            
+            serializer.is_valid(raise_exception=True)
+            
+            # Логируем данные перед сохранением
+            logger.info(f"Updating user data: {serializer.validated_data}")
+            
+            user = serializer.save()
+            
+            # Логируем результат
+            logger.info(f"User updated successfully. New data: {user.__dict__}")
+            
+            return Response(serializer.data)
+            
+        serializer = CustomUserCreateSerializer(request.user)  # Для GET оставляем старый
         return Response(serializer.data)
     
 class PendingUsersViewSet(viewsets.GenericViewSet,

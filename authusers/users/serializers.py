@@ -3,8 +3,54 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from django.contrib.auth.hashers import make_password
 from .models import User 
+from djoser.serializers import UserSerializer  # Или другой базовый сериализатор
+from django.contrib.auth import get_user_model
+from datetime import datetime
 
+User = get_user_model()
 
+class CustomUserUpdateSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(source='first_name', required=False)
+    firstname = serializers.CharField(source='last_name', required=False)
+    patronymic = serializers.CharField(source='father_name', required=False)
+    birthdate = serializers.CharField(required=False)  # Принимаем любую строку
+    
+    class Meta:
+        model = User
+        fields = ['name', 'firstname', 'patronymic', 'birthdate']
+    
+    def validate_birthdate(self, value):
+        """Парсим дату в разных форматах"""
+        if not value:
+            return None
+            
+        try:
+            # Пробуем ISO формат (2004-01-23T00:00:00Z)
+            return datetime.fromisoformat(value.replace('Z', '+00:00')).date()
+        except ValueError:
+            try:
+                # Пробуем простой формат даты (2004-01-23)
+                return datetime.strptime(value, '%Y-%m-%d').date()
+            except ValueError:
+                raise serializers.ValidationError(
+                    'Неправильный формат даты. Используйте YYYY-MM-DD или ISO формат.'
+                )
+    
+    def update(self, instance, validated_data):
+        # Обновляем стандартные поля
+        if 'first_name' in validated_data:
+            instance.first_name = validated_data['first_name']
+        if 'last_name' in validated_data:
+            instance.last_name = validated_data['last_name']
+        if 'father_name' in validated_data:
+            instance.father_name = validated_data['father_name']
+        
+        # Особый случай для даты рождения
+        if 'birthdate' in validated_data:
+            instance.birthday = validated_data['birthdate']
+        
+        instance.save()
+        return instance
 
 class CustomUserCreateSerializer(UserCreateSerializer):
     birthday = serializers.DateField(required=True)
