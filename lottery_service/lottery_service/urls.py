@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lot.views import LotteryListAPIView, ParticipantListCreateAPIView
+from lot.views import LotteryListAPIView, ParticipantListCreateAPIView, TimeLagAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lotteries/', LotteryListAPIView.as_view(), name='lottery-list'),
     path('participants/', ParticipantListCreateAPIView.as_view(), name='participant-list-create'),
+    path('time-lag/', TimeLagAPIView.as_view(), name='time-lag'),
 ]
