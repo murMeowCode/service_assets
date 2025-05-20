@@ -1,8 +1,10 @@
 from rest_framework import generics, permissions, viewsets, mixins
 from .models import Lottery, Participant
-from .serializers import LotterySerializer, ParticipantSerializer
+from .serializers import LotterySerializer, ParticipantSerializer, TimeLagSerializer
 from rest_framework.response import Response
-from django.utils import timezone
+from rest_framework.views import APIView
+from django.conf import settings
+from rest_framework import status
 from .services.rabbitmq_service import RabbitMQService
 from django.db.models import Sum, Count
 from django.db import models
@@ -13,6 +15,29 @@ class LotteryViewSet(viewsets.GenericViewSet,
                      mixins.UpdateModelMixin):
     queryset = Lottery.objects.all()
     serializer_class = LotterySerializer
+
+class TimeLagAPIView(APIView):
+    """
+    API для получения и обновления параметра time_lag
+    """
+    def get(self, request):
+        # Получаем текущее значение time_lag из настроек
+        data = {
+            'time_lag': getattr(settings, 'TIME_LAG', 0)
+        }
+        return Response(data)
+
+    def patch(self, request):
+        serializer = TimeLagSerializer(data=request.data)
+        if serializer.is_valid():
+            # Обновляем значение в настройках Django
+            new_time_lag = serializer.validated_data['time_lag']
+            setattr(settings, 'TIME_LAG', new_time_lag)
+            
+            # Если нужно сохранить между перезапусками приложения,
+            # следует записать в файл настроек или БД
+            return Response({'time_lag': new_time_lag})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ParticipantListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = ParticipantSerializer

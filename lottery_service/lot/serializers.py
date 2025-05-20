@@ -6,6 +6,14 @@ class LotterySerializer(serializers.ModelSerializer):
         model = Lottery
         fields = '__all__'
         read_only_fields = ('tickets_sold', 'is_finished')
+        
+class TimeLagSerializer(serializers.Serializer):
+    time_lag = serializers.IntegerField(
+        required=True,
+        min_value=10,
+        max_value=30,
+        help_text="Time lag in minutes"
+    )
 
 class ParticipantSerializer(serializers.ModelSerializer):
     lottery_title = serializers.CharField(source='lottery.title', read_only=True)
