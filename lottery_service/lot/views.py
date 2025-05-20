@@ -4,6 +4,8 @@ from .serializers import LotterySerializer, ParticipantSerializer
 from rest_framework.response import Response
 from django.utils import timezone
 from .services.rabbitmq_service import RabbitMQService
+from django.db.models import Sum, Count
+from django.db import models
 
 class LotteryViewSet(viewsets.GenericViewSet,
                      mixins.CreateModelMixin,

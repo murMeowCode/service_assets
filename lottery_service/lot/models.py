@@ -23,8 +23,7 @@ class Participant(models.Model):
         ('partial_winner', 'Partial Winner'),
         ('loser', 'Loser'),
     ]
-    
-    user_id = models.UUIDField()
+    user_id = models.BigIntegerField()
     lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
     ticket_number = models.CharField(max_length=50)
     status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='waiting')
