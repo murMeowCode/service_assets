@@ -2,6 +2,7 @@ from pygost import gost28147
 import secrets
 from lot.models import Lottery, Participant
 from .rabbitmq_service import RabbitMQService
+from .password_service import LotPassword
 
 class LotteryService:
     @staticmethod
@@ -14,20 +15,6 @@ class LotteryService:
 
         for lottery in finished_lotteries:
             LotteryService._process_lottery(lottery)
-
-    @staticmethod
-    def _generate(number):
-        '''
-        Функция генерации случайного числа из числа сочетаний
-        number: количество сочетаний
-        '''
-        key = secrets.token_bytes(32)
-        sbox = "id-Gost28147-89-CryptoPro-A-ParamSet"
-        random_bytes = gost28147.encrypt(key=key,ns= (1,1), sbox = sbox)
-        PSP = random_bytes[1]
-        result = (PSP % number) + 1
-        
-        return result
 
     
     @staticmethod
@@ -55,9 +42,7 @@ class LotteryService:
     @staticmethod
     def _select_winners(participants):
         
-        win = list()
-        for _ in range(4):
-            win.append(LotteryService._generate(3))
+        key = LotPassword().get_key()
         
         full_winners = []
         partial_winners = []
@@ -66,17 +51,10 @@ class LotteryService:
             # Преобразуем строку '1234' в [1, 2, 3, 4]
             ticket_numbers = [int(digit) for digit in participant.ticket]
             
-            match_count = 0
-            for i in range(4):
-                if ticket_numbers[i] == win[i]:
-                    match_count += 1
-                else:
-                    break  # Прерываем, если не совпадает очередное число
+            match_count = LotPassword.check_sequences(key, ticket_numbers)
             
-            if match_count == 4:
-                full_winners.append(participant)
-            elif match_count == 3:
-                partial_winners.append(participant)
+            if match_count == 1: full_winners.append(participant)
+            elif match_count == 3 or match_count == 2: partial_winners.append(participant)
             
         return {
             'full_winners': full_winners,
