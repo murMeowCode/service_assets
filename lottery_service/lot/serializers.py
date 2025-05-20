@@ -17,8 +17,9 @@ class TimeLagSerializer(serializers.Serializer):
 
 class ParticipantSerializer(serializers.ModelSerializer):
     lottery_title = serializers.CharField(source='lottery.title', read_only=True)
+    lottery_id = serializers.IntegerField(write_only=True)  # Добавляем явное поле для записи
     
     class Meta:
         model = Participant
         fields = '__all__'
-        read_only_fields = ('user_id', 'ticket_number', 'status', 'prize_amount')
+        read_only_fields = ('user_id', 'ticket_number', 'status', 'prize_amount', 'lottery')  # Добавляем lottery в read_only

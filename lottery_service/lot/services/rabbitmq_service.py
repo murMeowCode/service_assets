@@ -15,7 +15,7 @@ def get_notification_content(status):
 
 class RabbitMQService:
     @staticmethod
-    def send_balance_update(user_id, amount, type, value_type):
+    def send_balance_update(user_id, amount, opearation_type, value_type):
         connection = pika.BlockingConnection(
             pika.ConnectionParameters(
                 host=settings.RABBITMQ_HOST,
@@ -31,9 +31,9 @@ class RabbitMQService:
         channel.queue_declare(queue='user_balance_updates', durable=True)
         
         message = {
-            'user_id': str(user_id),
+            'user_id': int(user_id),
             'amount': float(amount),
-            'type': type,
+            'type': opearation_type,
             'value_type': value_type,
         }
 

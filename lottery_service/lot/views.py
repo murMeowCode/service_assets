@@ -79,9 +79,9 @@ class ParticipantListCreateAPIView(generics.ListCreateAPIView):
         return Response(response_data)
     
     def perform_create(self, serializer):
-        lottery_id = self.request.data.get('lottery_id')
-        lottery = Lottery.objects.get(id=lottery_id)
-        RabbitMQService.send_balance_update(self.request.user.id,lottery.ticket_price,"outcome",self.request.data.value_type)
+        lottery = self.request.data.get('lottery_id')
+        lottery = Lottery.objects.get(id=lottery)
+        RabbitMQService.send_balance_update(self.request.user.id,lottery.ticket_price,"outcome",self.request.data["value_type"])
         # Generate ticket number (you might want to implement a better logic)
         ticket_number = self.request.data.get('ticket')
         
