@@ -7,5 +7,7 @@ class RoleListAPIView(ListAPIView):
     serializer_class = RoleSerializer
     
 class VipAPIView(RetrieveAPIView):
+    lookup_field = 'id'  # Теперь будет искать по полю id
+    lookup_url_kwarg = 'id'  # Соответствует имени в URL: vip/<int:id>/
     queryset = VipStatus.objects.all()
     serializer_class = VipSerializer
