@@ -1,11 +1,14 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, viewsets, mixins
 from .models import Lottery, Participant
 from .serializers import LotterySerializer, ParticipantSerializer
 from rest_framework.response import Response
 from django.utils import timezone
 from .services.rabbitmq_service import RabbitMQService
 
-class LotteryListAPIView(generics.ListAPIView):
+class LotteryViewSet(viewsets.GenericViewSet,
+                     mixins.CreateModelMixin,
+                     mixins.ListModelMixin,
+                     mixins.UpdateModelMixin):
     queryset = Lottery.objects.all()
     serializer_class = LotterySerializer
 

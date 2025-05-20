@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lot.views import LotteryListAPIView, ParticipantListCreateAPIView
+from rest_framework.routers import DefaultRouter
+from lot.views import LotteryViewSet, ParticipantListCreateAPIView
 
+router = DefaultRouter()
+router.register(r'lotteries',LotteryViewSet,basename='lotteries')
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('lotteries/', LotteryListAPIView.as_view(), name='lottery-list'),
     path('participants/', ParticipantListCreateAPIView.as_view(), name='participant-list-create'),
 ]
+urlpatterns+=router.urls
