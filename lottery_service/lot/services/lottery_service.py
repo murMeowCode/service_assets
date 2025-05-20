@@ -49,9 +49,9 @@ class LotteryService:
 
         for participant in participants:
             # Преобразуем строку '1234' в [1, 2, 3, 4]
-            ticket_numbers = [int(digit) for digit in participant.ticket]
-            
-            match_count = LotPassword.check_sequences(key, ticket_numbers)
+            ticket_numbers = [int(digit) for digit in participant.ticket_number]
+            lot = LotPassword()
+            match_count = lot.check_sequences(secret=key,user_input= ticket_numbers)
             
             if match_count == 1: full_winners.append(participant)
             elif match_count == 3 or match_count == 2: partial_winners.append(participant)

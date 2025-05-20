@@ -1,5 +1,5 @@
 from rest_framework import generics, permissions, viewsets, mixins
-from lottery_service.celery import update_celery_schedule
+from lottery_service.celery import update_celery_intervals
 from .models import Lottery, Participant
 from .serializers import LotterySerializer, ParticipantSerializer, TimeLagSerializer
 from rest_framework.response import Response
@@ -9,13 +9,21 @@ from rest_framework import status
 from .services.rabbitmq_service import RabbitMQService
 from django.db.models import Sum, Count
 from django.db import models
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 class LotteryViewSet(viewsets.GenericViewSet,
-                     mixins.CreateModelMixin,
-                     mixins.ListModelMixin,
-                     mixins.UpdateModelMixin):
+                    mixins.CreateModelMixin,
+                    mixins.ListModelMixin,
+                    mixins.UpdateModelMixin):
     queryset = Lottery.objects.all()
     serializer_class = LotterySerializer
+
+    def get_permissions(self):
+        if self.action == 'list':
+            permission_classes = [AllowAny]  # Разрешить всем
+        else:
+            permission_classes = [IsAuthenticated]  # Требовать авторизацию для остальных действий
+        return [permission() for permission in permission_classes]
 
 class TimeLagAPIView(APIView):
     """
@@ -33,7 +41,7 @@ class TimeLagAPIView(APIView):
         if serializer.is_valid():
             new_time_lag = serializer.validated_data['time_lag']
             setattr(settings, 'TIME_LAG', new_time_lag)
-            update_celery_schedule(new_time_lag)  # Обновляем расписание
+            update_celery_intervals()   # Обновляем расписание
             return Response({'time_lag': new_time_lag})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

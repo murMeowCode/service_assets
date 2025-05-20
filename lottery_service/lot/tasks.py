@@ -5,11 +5,11 @@ from django.utils import timezone
 from datetime import timedelta
 from django.conf import settings
 
-@shared_task(name="check_and_process_finished_lotteries")
+@shared_task(name="lot.tasks.check_and_process_finished_lotteries")
 def check_and_process_finished_lotteries():
     LotteryService.process_finished_lotteries()
     
-@shared_task(name="create-new-lottery")
+@shared_task(name="lot.tasks.create_new_lottery")
 def create_new_lottery():
     # Получаем все незавершенные лотереи
     active_lotteries = Lottery.objects.filter(is_finished=False).order_by('-end_date')

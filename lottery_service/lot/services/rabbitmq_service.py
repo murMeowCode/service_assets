@@ -73,7 +73,7 @@ class RabbitMQService:
             'task': 'notify.tasks.process_notification',  # Указываем полный путь к задаче
             'args': [{
                 'to_user': part_instance.user_id,
-                'user_email': response.email,
+                'user_email': response['email'],
                 'subject': 'Результат проведения лотереи',
                 'content': get_notification_content(part_instance.status)
             }],
