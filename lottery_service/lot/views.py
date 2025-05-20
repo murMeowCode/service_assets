@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions, viewsets, mixins
+from lottery_service.celery import update_celery_schedule
 from .models import Lottery, Participant
 from .serializers import LotterySerializer, ParticipantSerializer, TimeLagSerializer
 from rest_framework.response import Response
@@ -30,12 +31,9 @@ class TimeLagAPIView(APIView):
     def patch(self, request):
         serializer = TimeLagSerializer(data=request.data)
         if serializer.is_valid():
-            # Обновляем значение в настройках Django
             new_time_lag = serializer.validated_data['time_lag']
             setattr(settings, 'TIME_LAG', new_time_lag)
-            
-            # Если нужно сохранить между перезапусками приложения,
-            # следует записать в файл настроек или БД
+            update_celery_schedule(new_time_lag)  # Обновляем расписание
             return Response({'time_lag': new_time_lag})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
