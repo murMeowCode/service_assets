@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hr453lmoiosd6l_lekueo=4rw+gl#3t=c(6mu6!y&in^9u&&tn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,11 +78,14 @@ WSGI_APPLICATION = 'notifications.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'notifications_db',
+        'USER': 'postgres',
+        'PASSWORD': '2418908595',
+        'HOST': '0.0.0.0',
+        'PORT': '54320',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
